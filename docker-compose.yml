@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  # message_queue:
+  #   image: rabbitmq:3-management
+  #   ports:
+  #     - "5672:5672"
+  #     - "15672:15672"
+  
+  backend_server:
+    build:
+        context: ./backend
+        dockerfile: Docker-messaging-system
+    image: messaging-system
+    ports:
+      - "8000:8000"
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./populate.js:/docker-entrypoint-initdb.d/populate.js
+#     networks:
+#       - mongodb_network
+
+# networks:
+#   mongodb_network:
+#     driver: bridge
