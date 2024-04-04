@@ -1,5 +1,6 @@
+const environments = require('../env');
 const { MongoClient } = require("mongodb");
-const client = new MongoClient('mongodb://mongo:27017', { connectTimeoutMS: 30000, useNewUrlParser: true, useUnifiedTopology: true });
+const client = new MongoClient(environments.database.connection, environments.database.settings);
 
 exports.getChatsForUser = async (req, res, next) => {
     try {

@@ -4,7 +4,12 @@ const env = {
       host: 'localhost',
     },
     database: {
-      connection: process.env.connection || 'mongodb://127.0.0.1:27017/ecommerce',
+      connection: 'mongodb://mongo:27017',
+      settings: {
+        connectTimeoutMS: 30000, 
+        useNewUrlParser: true, 
+        useUnifiedTopology: true
+      }
     },
   };
   
