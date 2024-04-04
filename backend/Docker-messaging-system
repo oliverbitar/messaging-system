@@ -1,8 +1,13 @@
 FROM node:18-alpine
-WORKDIR /messaging-system/app
 COPY package.json ./
 RUN npm install
 COPY app.js ./
+COPY env.js ./
+COPY config/server.js /config/
+COPY routes/chat_route.js /routes/
+COPY routes/message_route.js /routes/
+COPY controller/chat_controller.js /controller/
+COPY controller/message_controller.js /controller/
 
 EXPOSE 8000
 CMD ["npm", "start"]

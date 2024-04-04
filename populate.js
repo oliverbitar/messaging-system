@@ -10,8 +10,8 @@ db.users.insertMany([
 
 db.user_chats.insertMany([
     { id:1, messager_1_id: 1, messager_2_id: 2, last_message: 'How are you?', date_modified: '2024-04-01 16:52:00', date_created: '2000-01-01 00:00:00'},
-    { id:2, messager_1_id: 1, messager_2_id: 3, last_message: '', date_modified: '2024-04-01 12:33:00', date_created: '2000-01-01 00:00:00'},
-    { id:3, messager_1_id: 1, messager_2_id: 4, last_message: '', date_modified: '2024-04-01 21:11:00', date_created: '2000-01-01 00:00:00'}
+    { id:2, messager_1_id: 1, messager_2_id: 3, last_message: 'I am bored', date_modified: '2024-04-01 12:33:00', date_created: '2000-01-01 00:00:00'},
+    { id:3, messager_1_id: 1, messager_2_id: 4, last_message: 'I love pasta', date_modified: '2024-04-01 21:11:00', date_created: '2000-01-01 00:00:00'}
 ]);
 
 db.chat_messages.insertMany([

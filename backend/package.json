@@ -2,9 +2,9 @@
   "name": "messaging-system",
   "version": "1.0.0",
   "description": "Implementing a messaging platform",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
