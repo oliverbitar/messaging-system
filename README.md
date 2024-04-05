@@ -6,7 +6,7 @@ is have docker installed
 
 # to start server
 ```
-run docker compose up --build
+docker compose up --build
 ```
 
 # api calls:
